@@ -1,0 +1,18 @@
+.httpbin-app {
+	padding: 20px;
+	height: 100vh;
+}
+
+.buttons {
+	margin: 10px 0;
+}
+
+.response {
+	color: #242424;
+	background: #f4f4f4;
+	padding: 10px;
+}
+
+.loader {
+	padding: 10px
+}
