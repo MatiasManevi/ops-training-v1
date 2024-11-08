@@ -1,3 +1,7 @@
+# Purpose
+
+This application's purpose is to allow a end user to interact with https://httpbin.org/#/ endpoints.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
