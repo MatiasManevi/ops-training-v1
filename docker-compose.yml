@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  frontend:
+    build:
+      context: ./httpbin-react-app
+      dockerfile: Dockerfile
+    ports:
+      - "1000:80" # Expose the frontend on localhost:1000
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_HTTPBIN_URL=http://backend:80 # Base URL for the httpbin backend
+    networks:
+      - app-network
+
+  backend:
+    image: kennethreitz/httpbin
+    ports:
+      - "9090:80" # Expose the httpbin service on localhost:9090 for direct access
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
